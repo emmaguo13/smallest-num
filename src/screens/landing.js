@@ -11,7 +11,7 @@ function Landing() {
     async function handleSubmit(event){
         event.preventDefault();
         setEntry(event.target.value)
-        const response = await fetch('/check', {
+        const response = await fetch('/', {
             method: 'POST',
             body: JSON.stringify({ entry: entry })
         })

@@ -12,9 +12,6 @@ function App() {
         <Route exact path= "/">
           <Landing />
         </Route>
-        <Route exact path= "/check"> 
-          <Landing /> 
-        </Route>
       </Switch>
     </Router>
   );
