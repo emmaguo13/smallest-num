@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 let smallestNum = Infinity;
 
 //finish later
-app.post('/', (req, res) => {
+app.post('/test', (req, res) => {
     console.log(req.body);
     if (parseInt(req.body) < smallestNum) {
         smallestNum = req.body
@@ -13,6 +13,8 @@ app.post('/', (req, res) => {
         res.send("try again?")
     }
 })
+
+app.use("/", express.static("./"));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

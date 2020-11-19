@@ -10,8 +10,9 @@ function Landing() {
 
     async function handleSubmit(event){
         event.preventDefault();
+        console.log("hi")
         setEntry(event.target.value)
-        const response = await fetch('/', {
+        const response = await fetch('/test', {
             method: 'POST',
             body: JSON.stringify({ entry: entry })
         })
